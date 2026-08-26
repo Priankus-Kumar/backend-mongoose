@@ -7,8 +7,8 @@ let NotesSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    minlength: 10,
-  },
+    minlength: [20,"Minimum 20 character are required"],
+  },    
 });
 
 const NotesModel = mongoose.model("Notes", NotesSchema);
